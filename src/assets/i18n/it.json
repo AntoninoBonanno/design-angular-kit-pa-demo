@@ -1,0 +1,13 @@
+{
+  "welcome": "Benvenuto",
+  "report": "Segnalazione",
+
+  "it": {
+    "general": {
+      "send": "Salva e invia"
+    },
+    "errors": {
+      "required-field": "Obbligatorio"
+    }
+  }
+}
