@@ -1,1 +1,43 @@
-<p>report-tab works!</p>
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <it-input label="Nome" formControlName="fullName">
+        <it-icon name="user" size="sm" prependText></it-icon>
+      </it-input>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <it-input label="Codice fiscale" formControlName="taxCode">
+        <it-icon name="user" size="sm" appendText></it-icon>
+      </it-input>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <!--Show if the field is valid with `validationMode="true"`-->
+      <it-input type="email" label="Email" formControlName="email" validationMode="true"></it-input>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <it-select label="Motivo della richiesta"
+                 [options]="options"
+                 [groups]="groups"
+                 formControlName="reason"></it-select>
+    </div>
+  </div>
+
+  <it-textarea label="Messaggio" formControlName="message"></it-textarea>
+
+  <it-checkbox formControlName="privacy">
+    <ng-container label>
+      Accetto le condizioni di <a href="#">privacy</a>
+    </ng-container>
+  </it-checkbox>
+
+  <div class="d-flex justify-content-end mt-2">
+    <button type="submit" itButton="primary" [progress]="isLoading" [disabled]="isLoading">
+      {{'it.general.send' | translate}}
+    </button>
+  </div>
+
+</form>

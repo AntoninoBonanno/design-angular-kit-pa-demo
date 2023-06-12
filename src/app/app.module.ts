@@ -3,7 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {DesignAngularKitModule, ItLanguageSwitcherComponent} from "design-angular-kit";
+import {DesignAngularKitModule, ItLanguageSwitcherComponent, ItNotificationsComponent} from "design-angular-kit";
 import {TranslateStore} from '@ngx-translate/core'
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
@@ -17,7 +17,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
     DesignAngularKitModule,
     BrowserAnimationsModule,
-    ItLanguageSwitcherComponent
+    ItLanguageSwitcherComponent,
+    ItNotificationsComponent
   ],
   providers: [TranslateStore],
   bootstrap: [AppComponent]
