@@ -3,7 +3,12 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {DesignAngularKitModule, ItLanguageSwitcherComponent, ItNotificationsComponent} from "design-angular-kit";
+import {
+  DesignAngularKitModule,
+  ItBackToTopComponent,
+  ItLanguageSwitcherComponent,
+  ItNotificationsComponent
+} from "design-angular-kit";
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core'
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HttpBackend, HttpClientModule} from "@angular/common/http";
@@ -33,7 +38,8 @@ import {MultiTranslateHttpLoader} from "ngx-translate-multi-http-loader";
     DesignAngularKitModule,
     BrowserAnimationsModule,
     ItLanguageSwitcherComponent,
-    ItNotificationsComponent
+    ItNotificationsComponent,
+    ItBackToTopComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
