@@ -7,7 +7,11 @@
   </div>
 
   <it-breadcrumb>
-    <it-breadcrumb-item href="/">Home</it-breadcrumb-item>
+    <it-breadcrumb-item *ngFor="let crumb of (breadcrumbs$ | async)"
+                        [href]="crumb.routeLink"
+                        [iconName]="getCrumbIcon(crumb)">
+      {{crumb.label}}
+    </it-breadcrumb-item>
   </it-breadcrumb>
 
   <router-outlet></router-outlet>
