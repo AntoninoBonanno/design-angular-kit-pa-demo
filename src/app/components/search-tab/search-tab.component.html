@@ -1,1 +1,32 @@
-<p>search-tab works!</p>
+<it-input type="search"
+          label="Cerca..."
+          [autocompleteData]="search$"
+          (autocompleteSelectedEvent)="onSelected($event)"></it-input>
+
+<div class="text-center" *ngIf="isLoading; else complete">
+  <it-spinner double="true"></it-spinner>
+</div>
+
+<ng-template #complete>
+  <ng-container *ngIf="selectedItem; else alert">
+    <it-list>
+      <it-list-item *ngFor="let val of selectedItem.data">
+        <it-icon name="user" color="primary" icon></it-icon>
+        <span class="text-primary">{{val}}</span>
+      </it-list-item>
+    </it-list>
+
+    <div class="mt-4">
+      <it-pagination [currentPage]="selectedItem.currentPage"
+                     [pageNumbers]="selectedItem.pageNumbers"
+                     alignment="center"
+                     (pageEvent)="onPageChange($event, selectedItem)"></it-pagination>
+    </div>
+  </ng-container>
+
+  <ng-template #alert>
+    <it-alert color="warning">
+      Ricerca "Firenze" per visualizzare altre informazioni
+    </it-alert>
+  </ng-template>
+</ng-template>
