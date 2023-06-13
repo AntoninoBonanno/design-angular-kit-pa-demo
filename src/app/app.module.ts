@@ -5,7 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {
   DesignAngularKitModule,
-  ItBackToTopComponent,
+  ItBackToTopComponent, ItBreadcrumbsModule,
   ItLanguageSwitcherComponent,
   ItNotificationsComponent
 } from "design-angular-kit";
@@ -39,7 +39,8 @@ import {MultiTranslateHttpLoader} from "ngx-translate-multi-http-loader";
     BrowserAnimationsModule,
     ItLanguageSwitcherComponent,
     ItNotificationsComponent,
-    ItBackToTopComponent
+    ItBackToTopComponent,
+    ItBreadcrumbsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
